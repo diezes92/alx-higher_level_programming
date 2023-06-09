@@ -8,5 +8,5 @@ if __name__ == "__main__":
         print("{}".format(sum))
     elif lgt >= 1:
         for i in range(1, lgt + 1, 1):
-            sum = sum + sys.argv[i]
+            sum = sum + int(sys.argv[i])
         print("{}".format(sum))
