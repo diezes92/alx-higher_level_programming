@@ -1,5 +1,14 @@
 #!/usr/bin/python3
-class Rectangle:
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
+
+"""
+A module containing a Rectangle class
+
+"""
+
+
+class Rectangle():
+    """
+    An empty Rectangle class
+
+    """
+    pass
