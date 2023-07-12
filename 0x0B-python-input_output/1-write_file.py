@@ -1,21 +1,25 @@
 #!/usr/bin/python3
-""" Module that contains a function that returns the number of lines
-    of a text file
+
+"""
+Contains write_file function
 """
 
 
-def number_of_lines(filename=""):
-    """ Function that reads from a file and prints its number of lines
+def write_file(filename="", text=""):
+    """
+    Write a text file with UTF8 encoding
 
     Args:
-        filename: filename
-
-    Raises
-        Exception: when the file can be opened
-
+        filename (str): name of or path to file
+        text (str): string to write to file
     """
-    nb = 0
-    with open(filename, 'r', encoding="utf-8") as fl:
-        for li in fl:
-            nb += 1
-    return nb
+
+    nb_chars = 0
+
+    if not isinstance(text, str):
+        return nb_chars
+
+    with open(filename, "w", encoding="utf-8") as file:
+        nb_chars = file.write(text)
+
+    return nb_chars
