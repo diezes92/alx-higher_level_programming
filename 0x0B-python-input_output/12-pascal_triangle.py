@@ -22,8 +22,6 @@ def pascal_triangle(n):
         for j in range(i):
             if j == 0 or j + 1 == i:
                 row.append(1)
-            # elif (n / 2) >= (float) j:
-                # row.append(prev_row[j] + prev_row[j - 1])
             else:
                 row.append(prev_row[j] + prev_row[j - 1])
         matrix.append(row)
